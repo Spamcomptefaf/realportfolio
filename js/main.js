@@ -236,39 +236,27 @@ function initContactForm() {
     if (!contactForm) return;
 
     contactForm.addEventListener('submit', function(event) {
-        event.preventDefault();
-
         const name = document.getElementById('name').value.trim();
         const email = document.getElementById('email').value.trim();
         const subject = document.getElementById('subject').value.trim();
         const message = document.getElementById('message').value.trim();
 
         if (!name || !email || !subject || !message) {
+            event.preventDefault();
             showToast('Veuillez remplir tous les champs.', 'error');
             return;
         }
 
-        const formData = new FormData(contactForm);
-        
-        fetch(contactForm.action, {
-            method: 'POST',
-            body: formData,
-            headers: {
-                'Accept': 'application/json'
-            }
-        })
-        .then(response => response.json())
-        .then(data => {
-            if (data.success === 'true' || data.success === true) {
-                showToast('Message envoyé avec succès !', 'success');
-                contactForm.reset();
-            } else {
-                showToast('Erreur lors de l’envoi. Réessayez.', 'error');
-            }
-        })
-        .catch(() => {
-            showToast('Impossible d’envoyer le message. Vérifiez votre connexion.', 'error');
-        });
+        // Validation email basique
+        const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+        if (!emailRegex.test(email)) {
+            event.preventDefault();
+            showToast('Veuillez entrer une adresse email valide.', 'error');
+            return;
+        }
+
+        // Le formulaire sera soumis normalement à FormSubmit
+        showToast('Envoi en cours...', 'info');
     });
 }
 
