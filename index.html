@@ -22,7 +22,7 @@
     
     <title>Portfolio | Fares EL BOUSFI - Développeur</title>
     
-    <link rel="stylesheet" href="realportfolio/css/styles.css">
+    <link rel="stylesheet" href="css/styles.css">
     
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
     
@@ -60,7 +60,7 @@
         <div class="hero-content">
             <div class="profile-container">
                 <div class="profile-image-wrapper">
-                    <img src="realportfolio/img/photoprofil.png" alt="Photo profil" class="profile-image">
+                    <img src="img/photoprofil.png" alt="Photo profil" class="profile-image">
                     <div class="profile-badge">Disponible</div>
                 </div>
             </div>
@@ -234,7 +234,7 @@
                 <div class="experience-card">
                     <div class="exp-header">
                         <div class="exp-logo">
-                            <img src="realportfolio/img/logoburgerS.png" alt="Logo Burger's" class="company-logo">
+                            <img src="img/logoburgerS.png" alt="Logo Burger's" class="company-logo">
                         </div>
                         <div class="exp-info">
                             <h3 class="exp-title">Équipier Polyvalent</h3>
@@ -264,7 +264,7 @@
                 <div class="experience-card">
                     <div class="exp-header">
                         <div class="exp-logo">
-                            <img src="realportfolio/img/logoAgentdaccueil.png" alt="Logo APR Security" class="company-logo">
+                            <img src="img/logoAgentdaccueil.png" alt="Logo APR Security" class="company-logo">
                         </div>
                         <div class="exp-info">
                             <h3 class="exp-title">Agent d'accueil VIP</h3>
@@ -290,7 +290,7 @@
                 <div class="experience-card">
                     <div class="exp-header">
                         <div class="exp-logo">
-                            <img src="realportfolio/img/logomillegrill.png" alt="Logo Mille Grill" class="company-logo">
+                            <img src="img/logomillegrill.png" alt="Logo Mille Grill" class="company-logo">
                         </div>
                         <div class="exp-info">
                             <h3 class="exp-title">Cuisinier, Serveur</h3>
@@ -319,7 +319,7 @@
                 <div class="experience-card">
                     <div class="exp-header">
                         <div class="exp-logo">
-                            <img src="realportfolio/img/logocybergenix.png" alt="Logo CyberGenix" class="company-logo">
+                            <img src="img/logocybergenix.png" alt="Logo CyberGenix" class="company-logo">
                         </div>
                         <div class="exp-info">
                             <h3 class="exp-title">Développeur Web</h3>
@@ -353,17 +353,35 @@
             <h2 class="section-title">Mes Projets</h2>
             <div class="section-underline"></div>
             
-            <div class="projects-grid">
-                <div class="coming-soon-container">
-                    <div class="coming-soon-content">
-                        <i class="fas fa-briefcase"></i>
-                        <h3>Projets</h3>
-                        <p>
-                            Mes projets professionnels ne sont pas encore publiés.
-                        </p>
-                        <a href="https://github.com/FarBoussou" class="btn btn-primary" style="margin-top: 1.5rem;">
-                            <i class="fab fa-github"></i> Voir mon GitHub
-                        </a>
+            <div class="projects-grid" id="projectsGrid"></div>
+        </div>
+
+        <div class="project-modal" id="projectModal" aria-hidden="true">
+            <div class="project-modal-wrapper">
+                <button type="button" class="modal-close" id="projectModalClose" aria-label="Fermer le projet">
+                    <i class="fas fa-times"></i>
+                </button>
+                <div class="project-modal-grid">
+                    <div class="modal-image">
+                        <img id="modalImage" src="" alt="Image du projet">
+                    </div>
+                    <div class="modal-content">
+                        <span class="project-subtitle" id="modalSubtitle"></span>
+                        <h3 class="project-title" id="modalTitle"></h3>
+                        <p class="project-description" id="modalDescription"></p>
+                        <div class="project-section">
+                            <h4>Fonctionnalités</h4>
+                            <ul id="modalFeatures" class="project-features"></ul>
+                        </div>
+                        <div class="project-section">
+                            <h4>Technologies</h4>
+                            <div id="modalTechnologies" class="project-tech"></div>
+                        </div>
+                        <div class="project-section">
+                            <h4>Compétences</h4>
+                            <div id="modalSkills" class="project-tech"></div>
+                        </div>
+                        <a id="modalLink" class="btn btn-primary modal-button" href="#" target="_blank" rel="noopener noreferrer">Voir le projet</a>
                     </div>
                 </div>
             </div>
@@ -477,7 +495,7 @@
     <!-- Toast notifications -->
     <div class="toast-container" id="toastContainer"></div>
 
-    <script src="realportfolio/js/main.js"></script>
+    <script src="js/main.js"></script>
     <!-- Google Analytics -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"></script>
     <script>
