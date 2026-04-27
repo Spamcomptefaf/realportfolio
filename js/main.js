@@ -340,11 +340,12 @@ function renderProjects() {
 
     projectsGrid.innerHTML = projectsData.map((project, index) => {
         const techTags = project.technologies.slice(0, 4).map(tech => `<span>${tech}</span>`).join('');
+        const imageSrc = project.image;
 
         return `
             <div class="project-card" data-project-index="${index}">
-                <div class="project-image">
-                    <img src="${project.image}" alt="${project.title}">
+                <div class="project-image" style="background-image: url('${imageSrc}');">
+                    <img src="${imageSrc}" alt="${project.title}">
                     <div class="project-overlay">
                         <span>Voir les détails</span>
                     </div>
