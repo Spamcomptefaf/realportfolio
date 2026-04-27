@@ -1,0 +1,490 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Portfolio professionnel de Fares EL BOUSFI - Développeur Web & Mobile, étudiant BTS SIO SLAM">
+    <meta name="keywords" content="développeur, web, portfolio, BTS SIO, SLAM, PHP, Laravel, JavaScript">
+    <meta name="author" content="Fares EL BOUSFI">
+    <meta name="theme-color" content="#667eea">
+    
+    <!-- Open Graph pour réseaux sociaux -->
+    <meta property="og:title" content="Portfolio | Fares EL BOUSFI - Développeur">
+    <meta property="og:description" content="Portfolio professionnel - Étudiant en BTS SIO SLAM intéressé par le développement informatique">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://spamcomptefaf.github.io/realportfolio">
+    <meta property="og:image" content="https://spamcomptefaf.github.io/realportfolio/img/photoprofil.png">
+    
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Portfolio | Fares EL BOUSFI">
+    <meta name="twitter:description" content="Développeur Web & Mobile - BTS SIO SLAM">
+    
+    <title>Portfolio | Fares EL BOUSFI - Développeur</title>
+    
+    <link rel="stylesheet" href="css/styles.css">
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    
+    
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="navbar-container">
+            <div class="logo">
+                <span class="logo-text">Portfolio</span>
+            </div>
+            <ul class="nav-menu">
+                <li class="nav-item"><a href="#home" class="nav-link">Accueil</a></li>
+                <li class="nav-item"><a href="#about" class="nav-link">À propos</a></li>
+                <li class="nav-item"><a href="#education" class="nav-link">Parcours</a></li>
+                <li class="nav-item"><a href="#experience" class="nav-link">Expériences</a></li>
+                <li class="nav-item"><a href="#projects" class="nav-link">Projets</a></li>
+                <li class="nav-item"><a href="#contact" class="nav-link">Contact</a></li>
+            </ul>
+            <div class="navbar-actions">
+                <button class="theme-toggle" id="themeToggle" title="Basculer le thème">
+                    <i class="fas fa-moon"></i>
+                </button>
+                <div class="hamburger">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <section id="home" class="hero">
+        <div class="hero-content">
+            <div class="profile-container">
+                <div class="profile-image-wrapper">
+                    <img src="img/photoprofil.png" alt="Photo profil" class="profile-image">
+                    <div class="profile-badge">Disponible</div>
+                </div>
+            </div>
+            
+            <h1 class="hero-title">
+                <span class="title-word">Bonjour,</span>
+                <span class="title-highlight">je suis Fares EL BOUSFI</span>
+            </h1>
+            
+            <p class="hero-subtitle">Développeur Informatique</p>
+            
+            <p class="hero-description">
+                Je suis un étudiant en deuxième année de BTS SIO au lycée Simone Weil à Saint-Priest-en-Jarez.
+                Intéressé par l'informatique et le développement, je me prépare à une carrière dans ce domaine en constant évolution.
+            </p>
+            
+            <div class="hero-buttons">
+                <a href="#contact" class="btn btn-primary">
+                    <i class="fas fa-paper-plane"></i> Me contacter
+                </a>
+                <a href="#projects" class="btn btn-secondary">
+                    <i class="fas fa-folder"></i> Voir mes projets
+                </a>
+            </div>
+            
+            <div class="social-links">
+                <a href="https://www.linkedin.com/in/fares-el-bousfi-53031b33b?originalSubdomain=fr" class="social-link" title="LinkedIn"><i class="fab fa-linkedin"></i></a>
+                <a href="https://github.com/FarBoussou" class="social-link" title="GitHub"><i class="fab fa-github"></i></a>
+                <a href="mailto:faresboussou@gmail.com" class="social-link" title="Email"><i class="fas fa-envelope"></i></a>
+            </div>
+        </div>
+    </section>
+
+    <section id="about" class="about section">
+        <div class="container">
+            <h2 class="section-title">À propos de moi</h2>
+            <div class="section-underline"></div>
+            
+            <div class="about-grid">
+                <div class="about-content">
+                    <h3>Qui suis-je ?</h3>
+                    <p>
+                        Je suis Fares EL BOUSFI, en deuxième année de BTS SIO (Services Informatiques aux Organisations),
+                        option SLAM (Solutions Logicielles et Applications Métier) au lycée Simone Weil à Saint-Priest-en-Jarez.
+                    </p>
+                    <p>
+                        Intéressé par l'informatique, je me prépare à une carrière dans le développement informatique, un domaine
+                            essentiel et en constante évolution.
+                    </p>
+                    
+                    <h3 style="margin-top: 2rem;">Soft Skills</h3>
+                    <div class="soft-skills">
+                        <div class="skill-badge">Créativité</div>
+                        <div class="skill-badge">Communication</div>
+                        <div class="skill-badge">Collaboration</div>
+                        <div class="skill-badge">Résolution de problèmes</div>
+                        <div class="skill-badge">Gestion de projet</div>
+                        <div class="skill-badge">Travail en équipe</div>
+                        <div class="skill-badge">Autonomie</div>
+                    </div>
+                </div>
+                
+                <div class="about-stats">
+                    <div class="stat-card">
+                        <h3>10+</h3>
+                        <p>Projets réalisés</p>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="skills-section">
+                <h3 style="text-align: center; margin-bottom: 2rem;">Compétences Techniques</h3>
+                <div class="skills-grid">
+                    <div class="skill-group">
+                        <h4><i class="fas fa-code"></i> Frontend</h4>
+                        <div class="skills-list">
+                            <span class="tech-badge">HTML</span>
+                            <span class="tech-badge">CSS</span>
+                            <span class="tech-badge">JavaScript</span>
+                        </div>
+                    </div>
+                    
+                    <div class="skill-group">
+                        <h4><i class="fas fa-server"></i> Backend</h4>
+                        <div class="skills-list">
+                            <span class="tech-badge">PHP</span>
+                            <span class="tech-badge">SQL</span>
+                            <span class="tech-badge">MySQL</span>
+                            <span class="tech-badge">Laravel</span>
+                            <span class="tech-badge">API</span>
+                        </div>
+                    </div>
+                    
+                    <div class="skill-group">
+                        <h4><i class="fas fa-laptop-code"></i> Programmation</h4>
+                        <div class="skills-list">
+                            <span class="tech-badge">Python</span>
+                            <span class="tech-badge">C++</span>
+                        </div>
+                    </div>
+                    
+                    <div class="skill-group">
+                        <h4><i class="fas fa-tools"></i> Outils & Systèmes</h4>
+                        <div class="skills-list">
+                            <span class="tech-badge">Git</span>
+                            <span class="tech-badge">GitHub</span>
+                            <span class="tech-badge">Docker</span>
+                            <span class="tech-badge">Linux</span>
+                            <span class="tech-badge">Windows</span>
+                            <span class="tech-badge">PhpMyAdmin</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="education" class="education section">
+        <div class="container">
+            <h2 class="section-title">Parcours Scolaire</h2>
+            <div class="section-underline"></div>
+            
+            <div class="timeline">
+                <div class="timeline-item">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-content">
+                        <div class="timeline-date">oct. 2024 - juin 2026</div>
+                        <h3>BTS SIO SLAM - 2ème année</h3>
+                        <p class="timeline-school">Lycée Simone Weil, Saint-Priest-en-Jarez (42)</p>
+                        <p class="timeline-description">
+                            Brevet de Technicien Supérieur (BTS) Services Informatiques aux Organisations (SIO),
+                            option Solutions Logicielles et Applications Métier (SLAM). En 2ème année de formation.
+                        </p>
+                    </div>
+                </div>
+                
+                <div class="timeline-item">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-content">
+                        <div class="timeline-date">sept. 2022 - juil. 2024</div>
+                        <h3>Baccalauréat STI2D</h3>
+                        <p class="timeline-school">Lycée Etienne Mimard, Saint-Étienne (42)</p>
+                        <p class="timeline-description">
+                            Baccalauréat Sciences et Technologies de l'Industrie et du Développement Durable (STI2D),
+                            option Systèmes d'Information et Numérique (SIN). Niveau : Admis
+                        </p>
+                    </div>
+                </div>
+                
+                <div class="timeline-item">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-content">
+                        <div class="timeline-date">2021-2022</div>
+                        <h3>Classe de Seconde</h3>
+                        <p class="timeline-school">Lycée Honoré d'Urfé, Saint-Étienne (42)</p>
+                        <p class="timeline-description">
+                            Classe de seconde générale et technologique.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="experience" class="experience section">
+        <div class="container">
+            <h2 class="section-title">Expériences Professionnelles</h2>
+            <div class="section-underline"></div>
+            
+            <div class="experience-container">
+                <div class="experience-card">
+                    <div class="exp-header">
+                        <div class="exp-logo">
+                            <img src="img/logoburgerS.png" alt="Logo Burger's" class="company-logo">
+                        </div>
+                        <div class="exp-info">
+                            <h3 class="exp-title">Équipier Polyvalent</h3>
+                            <p class="exp-company" data-company="Burger'S">Burger'S <span class="exp-location"><i class="fas fa-map-marker-alt"></i> Saint-Étienne</span></p>
+                            <p class="exp-date"><i class="fas fa-calendar"></i> Août 2025 - Aujourd'hui</p>
+                            <span class="exp-type">en cours</span>
+                        </div>
+                    </div>
+                    <div class="exp-description">
+                        <p>Équipier polyvalent dans un restaurant de restauration rapide.</p>
+                        <ul class="exp-tasks">
+                            <li>Plonge et nettoyage des ustensiles</li>
+                            <li>Nettoyage et entretien du restaurant</li>
+                            <li>Rangement des stocks et des livraisons</li>
+                            <li>Cuisson et préparation des sandwichs</li>
+                            <li>Service clients</li>
+                            <li>Gestion des stocks</li>
+                        </ul>
+                        <div class="exp-tech">
+                            <span>Service client</span>
+                            <span>Restauration</span>
+                            <span>Cuisine</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="experience-card">
+                    <div class="exp-header">
+                        <div class="exp-logo">
+                            <img src="img/logoAgentdaccueil.png" alt="Logo APR Security" class="company-logo">
+                        </div>
+                        <div class="exp-info">
+                            <h3 class="exp-title">Agent d'accueil VIP</h3>
+                            <p class="exp-company" data-company="APR SECURITY">APR SECURITY <span class="exp-location"><i class="fas fa-map-marker-alt"></i> Saint-Étienne</span></p>
+                            <p class="exp-date"><i class="fas fa-calendar"></i> Décembre 2024 - Aujourd'hui</p>
+                            <span class="exp-type">en cours</span>
+                        </div>
+                    </div>
+                    <div class="exp-description">
+                        <p>Agent de sécurité et d'accueil dans le domaine de la sécurité.</p>
+                        <ul class="exp-tasks">
+                            <li>Sécurité et accueil VIP</li>
+                            <li>Service client</li>
+                            <li>Gestion des accès</li>
+                        </ul>
+                        <div class="exp-tech">
+                            <span>Sécurité</span>
+                            <span>Service client</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="experience-card">
+                    <div class="exp-header">
+                        <div class="exp-logo">
+                            <img src="img/logomillegrill.png" alt="Logo Mille Grill" class="company-logo">
+                        </div>
+                        <div class="exp-info">
+                            <h3 class="exp-title">Cuisinier, Serveur</h3>
+                            <p class="exp-company">Mille Grill <span class="exp-location"><i class="fas fa-map-marker-alt"></i> Saint-Étienne</span></p>
+                            <p class="exp-date"><i class="fas fa-calendar"></i> Juillet 2023 - Juin 2025</p>
+                            <span class="exp-type">2 ans</span>
+                        </div>
+                    </div>
+                    <div class="exp-description">
+                        <p>Travail en tant que cuisinier et serveur dans un restaurant.</p>
+                        <ul class="exp-tasks">
+                            <li>Serveur clients et prise de commande</li>
+                            <li>Préparation cocktails</li>
+                            <li>Préparation de commandes</li>
+                            <li>Plonge et gestion des stocks</li>
+                            <li>Cuisson des viandes sur grill</li>
+                        </ul>
+                        <div class="exp-tech">
+                            <span>Service client</span>
+                            <span>Cuisine</span>
+                            <span>Gestion stocks</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="experience-card">
+                    <div class="exp-header">
+                        <div class="exp-logo">
+                            <img src="img/logocybergenix.png" alt="Logo CyberGenix" class="company-logo">
+                        </div>
+                        <div class="exp-info">
+                            <h3 class="exp-title">Développeur Web</h3>
+                            <p class="exp-company">CyberGenix <span class="exp-location"><i class="fas fa-map-marker-alt"></i> Saint-Étienne</span></p>
+                            <p class="exp-date"><i class="fas fa-calendar"></i> Mai 2025 - Juin 2025</p>
+                            <span class="exp-type">Stage (2 mois)</span>
+                        </div>
+                    </div>
+                    <div class="exp-description">
+                        <p>Stage de fin d'année d'une durée de 5 semaines dans un projet collectif international.</p>
+                        <ul class="exp-tasks">
+                            <li>Découvrir et utiliser Figma</li>
+                            <li>Travailler sur un projet collectif international d'amélioration du site web de l'entreprise</li>
+                            <li>Utiliser des outils de travail : Git, Forgejo, Bizup, Mattermost, Jitsi Meet</li>
+                            <li>Participer à des réunions en visioconférence avec l'équipe en France et à l'étranger</li>
+                        </ul>
+                        <div class="exp-tech">
+                            <span>Figma</span>
+                            <span>Git</span>
+                            <span>HTML</span>
+                            <span>CSS</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="projects" class="projects section">
+        <div class="container">
+            <h2 class="section-title">Mes Projets</h2>
+            <div class="section-underline"></div>
+            
+            <div class="projects-grid">
+                <div class="coming-soon-container">
+                    <div class="coming-soon-content">
+                        <i class="fas fa-briefcase"></i>
+                        <h3>Projets</h3>
+                        <p>
+                            Mes projets professionnels ne sont pas encore publiés.
+                        </p>
+                        <a href="https://github.com/FarBoussou" class="btn btn-primary" style="margin-top: 1.5rem;">
+                            <i class="fab fa-github"></i> Voir mon GitHub
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="contact" class="contact section">
+        <div class="container">
+            <h2 class="section-title">Me Contacter</h2>
+            <div class="section-underline"></div>
+            
+            <div class="contact-grid">
+                <div class="contact-info">
+                    <h3>Restons en contact</h3>
+                    <p>N'hésitez pas à me contacter pour discuter de nouveaux projets, de collaborations ou simplement pour échanger.</p>
+                    
+                    <div class="contact-items">
+                        <div class="contact-item">
+                            <i class="fas fa-envelope"></i>
+                            <div>
+                                <h4>Email</h4>
+                                <p><a href="mailto:faresboussou@gmail.com">faresboussou@gmail.com</a></p>
+                            </div>
+                        </div>
+                        
+                        <div class="contact-item">
+                            <i class="fas fa-map-marker-alt"></i>
+                            <div>
+                                <h4>Localisation</h4>
+                                <p>Saint-Étienne, France</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="contact-social">
+                        <h4>Réseaux sociaux</h4>
+                        <div class="social-grid">
+                            <a href="https://www.linkedin.com/in/fares-el-bousfi-53031b33b?originalSubdomain=fr" class="social-icon" title="LinkedIn"><i class="fab fa-linkedin"></i></a>
+                            <a href="https://github.com/FarBoussou" class="social-icon" title="GitHub"><i class="fab fa-github"></i></a>
+                            <a href="mailto:faresboussou@gmail.com" class="social-icon" title="Email"><i class="fas fa-envelope"></i></a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="contact-form-wrapper">
+                    <h3>Envoyez-moi un message</h3>
+                    <form id="contactForm" class="contact-form" action="https://formsubmit.co/ajax/faresboussou@gmail.com" method="POST">
+                        <input type="hidden" name="_captcha" value="false">
+                        <input type="hidden" name="_subject" value="Nouveau message depuis votre portfolio">
+                        <div class="form-group">
+                            <label for="name">Nom</label>
+                            <input type="text" id="name" name="name" placeholder="Votre nom" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="email">Email</label>
+                            <input type="email" id="email" name="email" placeholder="Votre email" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="subject">Sujet</label>
+                            <input type="text" id="subject" name="subject" placeholder="Sujet du message" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="message">Message</label>
+                            <textarea id="message" name="message" rows="6" placeholder="Votre message" required></textarea>
+                        </div>
+                        <button type="submit" class="btn btn-primary">Envoyer le message</button>
+                    </form>
+                    <p class="form-note">Le formulaire envoie maintenant directement votre message à <strong>faresboussou@gmail.com</strong>.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3>Portfolio</h3>
+                <p>Étudiant en BTS SIO intéressé par le développement informatique et les nouvelles technologies.</p>
+            </div>
+            
+            <div class="footer-section">
+                <h4>Navigation</h4>
+                <ul>
+                    <li><a href="#home">Accueil</a></li>
+                    <li><a href="#about">À propos</a></li>
+                    <li><a href="#projects">Projets</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </div>
+            
+            <div class="footer-section">
+                <h4>Suivez-moi</h4>
+                <div class="social-links">
+                    <a href="https://www.linkedin.com/in/fares-el-bousfi-53031b33b?originalSubdomain=fr" title="LinkedIn"><i class="fab fa-linkedin"></i></a>
+                    <a href="https://github.com/FarBoussou" title="GitHub"><i class="fab fa-github"></i></a>
+                    <a href="mailto:faresboussou@gmail.com" title="Email"><i class="fas fa-envelope"></i></a>
+                </div>
+            </div>
+        </div>
+        
+        <div class="footer-bottom">
+            <p>&copy; 2026 Fares EL BOUSFI. Tous droits réservés.</p>
+        </div>
+    </footer>
+    
+    <!-- Scroll to top button -->
+    <button class="scroll-to-top" id="scrollToTopBtn" title="Retour en haut">
+        <i class="fas fa-arrow-up"></i>
+    </button>
+    
+    <!-- Toast notifications -->
+    <div class="toast-container" id="toastContainer"></div>
+
+    <script src="js/main.js"></script>
+    <!-- Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'G-XXXXXXXXXX');
+    </script>
+</body>
+</html>

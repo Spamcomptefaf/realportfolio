@@ -1,0 +1,94 @@
+# =====================================================
+# .gitignore - Fichiers à ignorer dans Git
+# =====================================================
+
+# Dépendances Node
+node_modules/
+npm-debug.log
+yarn-error.log
+package-lock.json
+yarn.lock
+
+# Fichiers système macOS
+.DS_Store
+.AppleDouble
+.LSOverride
+*.swp
+*.swo
+*~
+
+# Éditeur VS Code
+.vscode/
+*.code-workspace
+
+# IDE
+.idea/
+.project
+.classpath
+.c9/
+*.launch
+.settings/
+*.sublime-workspace
+
+# Fichiers de configuration personnels
+.env
+.env.local
+.env.*.local
+
+# Logs
+logs/
+*.log
+npm-debug.log*
+
+# Fichiers temporaires
+tmp/
+temp/
+*.tmp
+*.bak
+
+# Build files (si utilisé avec build tools)
+dist/
+build/
+.next/
+out/
+
+# Cache
+.cache/
+.eslintcache
+
+# Fichiers de test
+coverage/
+.nyc_output/
+
+# Fichiers PDF locaux
+*.pdf
+!README.pdf
+
+# Images temporaires ou placeholders privées
+assets/images/temp/
+assets/images/private/
+
+# Fichiers sensibles
+passwords.txt
+secrets.json
+private-keys/
+
+# OS
+Thumbs.db
+desktop.ini
+
+# Éditeurs
+*.swp
+*.swo
+.vimrc
+
+# Fichiers compilés
+*.class
+*.pyc
+*.pyo
+*.so
+
+# Archives
+*.zip
+*.rar
+*.tar.gz
