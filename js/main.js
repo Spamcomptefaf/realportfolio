@@ -279,7 +279,7 @@ const projectsData = [
         ],
         technologies: ['Laravel', 'PHP', 'SQLite', 'Blade', 'Bootstrap'],
         skills: ['MVC', 'base de données', 'backend', 'sécurité'],
-        image: 'https://via.placeholder.com/900x600.png?text=BiblioTech',
+        image: 'img/laravel.png',
         link: ''
     },
     {
@@ -296,7 +296,7 @@ const projectsData = [
         ],
         technologies: ['HTML5', 'CSS3', 'JavaScript ES6+', 'Supabase', 'API REST', 'GitHub', 'Netlify/Vercel'],
         skills: ['Frontend', 'API', 'base de données', 'déploiement', 'projet full-stack'],
-        image: 'https://via.placeholder.com/900x600.png?text=AI+Mood+Tracker',
+        image: 'img/ai-mood-tracker.png',
         link: 'https://emoji-ai-mood.lovable.app'
     },
     {
@@ -313,7 +313,7 @@ const projectsData = [
         ],
         technologies: ['HTML5', 'CSS3', 'JavaScript', 'PHP'],
         skills: ['Création de site e-commerce', 'gestion de produits', 'logique backend', 'interface utilisateur'],
-        image: 'https://via.placeholder.com/900x600.png?text=Boussou+Fragrances',
+        image: 'img/boussou-fragrances.png',
         link: ''
     },
     {
@@ -329,10 +329,14 @@ const projectsData = [
         ],
         technologies: ['Python', 'API Mistral AI', 'OpenWeatherMap', 'variables d’environnement (.env)', 'API REST'],
         skills: ['Intégration d’API', 'intelligence artificielle', 'gestion de données en temps réel', 'sécurité des clés API', 'bonnes pratiques RGPD'],
-        image: 'https://via.placeholder.com/900x600.png?text=Assistant+Météo+Intelligent',
+        image: 'img/assistant-meteo.png',
         link: ''
     }
 ];
+
+function getProjectImageUrl(imagePath) {
+    return encodeURI(imagePath);
+}
 
 function renderProjects() {
     const projectsGrid = document.getElementById('projectsGrid');
@@ -340,11 +344,13 @@ function renderProjects() {
 
     projectsGrid.innerHTML = projectsData.map((project, index) => {
         const techTags = project.technologies.slice(0, 4).map(tech => `<span>${tech}</span>`).join('');
+        const imageUrl = getProjectImageUrl(project.image);
 
         return `
             <div class="project-card" data-project-index="${index}">
-                <div class="project-image">
-                    <img src="${project.image}" alt="${project.title}">
+                <div class="project-image" style="background-image: url('${imageUrl}');">
+                    <img src="${imageUrl}" alt="${project.title}">
+                    <div class="project-image-label">${project.title}</div>
                     <div class="project-overlay">
                         <span>Voir les détails</span>
                     </div>
@@ -373,7 +379,7 @@ function openProjectModal(project) {
     const modal = document.getElementById('projectModal');
     if (!modal) return;
 
-    document.getElementById('modalImage').src = project.image;
+    document.getElementById('modalImage').src = getProjectImageUrl(project.image);
     document.getElementById('modalImage').alt = project.title;
     document.getElementById('modalTitle').textContent = project.title;
     document.getElementById('modalSubtitle').textContent = project.subtitle;
