@@ -890,6 +890,7 @@ a:hover {
     transition: var(--transition);
     display: flex;
     flex-direction: column;
+    cursor: pointer;
 }
 
 .project-card:hover {
@@ -999,6 +1000,132 @@ a:hover {
     background: var(--primary);
     color: white;
     transform: translateY(-2px);
+}
+
+.project-modal {
+    position: fixed;
+    inset: 0;
+    background: rgba(15, 23, 42, 0.75);
+    display: none;
+    align-items: center;
+    justify-content: center;
+    padding: var(--spacing-xl);
+    z-index: 100;
+    overflow-y: auto;
+}
+
+.project-modal.active {
+    display: flex;
+}
+
+.project-modal-wrapper {
+    width: min(1100px, 100%);
+    background: white;
+    border-radius: 25px;
+    overflow: hidden;
+    box-shadow: var(--shadow-2xl);
+    animation: fadeInUp 0.5s ease;
+}
+
+.modal-close {
+    position: absolute;
+    right: 24px;
+    top: 24px;
+    width: 46px;
+    height: 46px;
+    border-radius: 50%;
+    border: 2px solid rgba(102, 126, 234, 0.2);
+    background: white;
+    color: var(--dark);
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: var(--transition);
+    z-index: 2;
+}
+
+.modal-close:hover {
+    transform: translateY(-2px);
+    background: var(--primary);
+    color: white;
+}
+
+.project-modal-grid {
+    display: grid;
+    grid-template-columns: 1.2fr 1fr;
+    gap: var(--spacing-xl);
+    position: relative;
+}
+
+.modal-image {
+    position: relative;
+    min-height: 420px;
+    overflow: hidden;
+}
+
+.modal-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.modal-content {
+    padding: var(--spacing-xl);
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-md);
+}
+
+.project-subtitle {
+    display: inline-block;
+    color: var(--primary);
+    font-weight: 600;
+    margin-bottom: var(--spacing-sm);
+}
+
+.project-section h4 {
+    margin-top: var(--spacing-lg);
+    margin-bottom: var(--spacing-sm);
+    color: var(--dark);
+}
+
+.project-features {
+    list-style: disc;
+    padding-left: 1.2rem;
+    color: var(--gray);
+    margin: 0;
+}
+
+.project-features li {
+    margin-bottom: 0.75rem;
+}
+
+.modal-button {
+    width: fit-content;
+    padding: 0.95rem 1.5rem;
+    margin-top: var(--spacing-lg);
+}
+
+@media (max-width: 992px) {
+    .project-modal-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .modal-image {
+        min-height: 320px;
+    }
+}
+
+@media (max-width: 768px) {
+    .project-modal {
+        padding: var(--spacing-md);
+    }
+
+    .modal-close {
+        right: 16px;
+        top: 16px;
+    }
 }
 
     /* ==================== COMING SOON PROJECTS ==================== */

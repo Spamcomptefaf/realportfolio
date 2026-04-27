@@ -190,10 +190,12 @@ const observer = new IntersectionObserver(function(entries) {
     });
 }, observerOptions);
 
-document.querySelectorAll('.project-card, .experience-card, .skill-group, .stat-card, .skills-category').forEach(element => {
-    element.style.opacity = '0';
-    observer.observe(element);
-});
+function initSectionAnimations() {
+    document.querySelectorAll('.project-card, .experience-card, .skill-group, .stat-card, .skills-category').forEach(element => {
+        element.style.opacity = '0';
+        observer.observe(element);
+    });
+}
 
 // ==================== STAT COUNTERS ==================== 
 
@@ -260,6 +262,166 @@ function initContactForm() {
     });
 }
 
+const projectsData = [
+    {
+        title: 'BiblioTech — Gestion de bibliothèque',
+        subtitle: 'Laravel · PHP · SQLite',
+        shortDescription: 'Application web de gestion de bibliothèque avec emprunts, réservations et dashboard admin.',
+        fullDescription: 'Application web de gestion de bibliothèque (livres, emprunts, réservations) développée avec Laravel en architecture MVC. Ce projet permet de maîtriser le framework Laravel tout en ajoutant des fonctionnalités avancées pour rendre l’application complète et réaliste.',
+        features: [
+            'Gestion des livres',
+            'Emprunts / retours',
+            'Réservations',
+            'Comptes avec rôles',
+            'Avis et notes',
+            'Dashboard admin',
+            'Notifications email'
+        ],
+        technologies: ['Laravel', 'PHP', 'SQLite', 'Blade', 'Bootstrap'],
+        skills: ['MVC', 'base de données', 'backend', 'sécurité'],
+        image: 'https://via.placeholder.com/900x600.png?text=BiblioTech',
+        link: ''
+    },
+    {
+        title: 'AI Mood Tracker',
+        subtitle: 'HTML · CSS · JavaScript · API · Supabase',
+        shortDescription: 'Application interactive pour évaluer et exprimer son humeur avec stockage en ligne.',
+        fullDescription: 'Application web permettant aux utilisateurs d’évaluer et d’exprimer leur humeur à travers une interface simple et interactive basée sur l’intelligence artificielle. Les utilisateurs peuvent sélectionner leur état émotionnel et ajouter un commentaire.',
+        features: [
+            'Sélection de l’humeur (emoji / état émotionnel)',
+            'Ajout de commentaires personnels',
+            'Interface interactive',
+            'Stockage des données en base',
+            'Site accessible en ligne'
+        ],
+        technologies: ['HTML5', 'CSS3', 'JavaScript ES6+', 'Supabase', 'API REST', 'GitHub', 'Netlify/Vercel'],
+        skills: ['Frontend', 'API', 'base de données', 'déploiement', 'projet full-stack'],
+        image: 'https://via.placeholder.com/900x600.png?text=AI+Mood+Tracker',
+        link: 'https://emoji-ai-mood.lovable.app'
+    },
+    {
+        title: 'Boussou Fragrances — Site e-commerce',
+        subtitle: 'HTML · CSS · JavaScript · PHP',
+        shortDescription: 'Site web de vente en ligne de parfums avec panier et commandes.',
+        fullDescription: 'Site web de vente en ligne de parfums avec toutes les fonctionnalités essentielles d’une boutique e-commerce. Ce projet représente mon premier projet concret orienté professionnel et permet de comprendre le parcours complet d’un site de vente en ligne.',
+        features: [
+            'Catalogue de produits (parfums)',
+            'Page produit détaillée',
+            'Panier d’achat',
+            'Système de commande',
+            'Interface utilisateur simple et fluide'
+        ],
+        technologies: ['HTML5', 'CSS3', 'JavaScript', 'PHP'],
+        skills: ['Création de site e-commerce', 'gestion de produits', 'logique backend', 'interface utilisateur'],
+        image: 'https://via.placeholder.com/900x600.png?text=Boussou+Fragrances',
+        link: ''
+    },
+    {
+        title: 'Assistant Météo Intelligent',
+        subtitle: 'Python · API REST · Mistral AI · OpenWeatherMap',
+        shortDescription: 'Assistant météo intelligent utilisant une IA et une API externe pour afficher des données en temps réel.',
+        fullDescription: 'Développement d’un assistant intelligent capable de fournir la météo en temps réel grâce à l’interaction entre une intelligence artificielle (LLM) et une API externe. Ce projet montre la connexion d’une IA à des données réelles et une application dynamique.',
+        features: [
+            'Recherche météo en temps réel par ville',
+            'Réponses générées par une IA (Mistral AI)',
+            'Interface simple de requête utilisateur',
+            'Affichage des données météo (température, conditions, etc.)'
+        ],
+        technologies: ['Python', 'API Mistral AI', 'OpenWeatherMap', 'variables d’environnement (.env)', 'API REST'],
+        skills: ['Intégration d’API', 'intelligence artificielle', 'gestion de données en temps réel', 'sécurité des clés API', 'bonnes pratiques RGPD'],
+        image: 'https://via.placeholder.com/900x600.png?text=Assistant+Météo+Intelligent',
+        link: ''
+    }
+];
+
+function renderProjects() {
+    const projectsGrid = document.getElementById('projectsGrid');
+    if (!projectsGrid) return;
+
+    projectsGrid.innerHTML = projectsData.map((project, index) => {
+        const techTags = project.technologies.slice(0, 4).map(tech => `<span>${tech}</span>`).join('');
+
+        return `
+            <div class="project-card" data-project-index="${index}">
+                <div class="project-image">
+                    <img src="${project.image}" alt="${project.title}">
+                    <div class="project-overlay">
+                        <span>Voir les détails</span>
+                    </div>
+                </div>
+                <div class="project-content">
+                    <span class="project-subtitle">${project.subtitle}</span>
+                    <h3 class="project-title">${project.title}</h3>
+                    <p class="project-description">${project.shortDescription}</p>
+                    <div class="project-tech">${techTags}</div>
+                </div>
+            </div>
+        `;
+    }).join('');
+
+    document.querySelectorAll('.project-card').forEach(card => {
+        card.addEventListener('click', function() {
+            const project = projectsData[parseInt(this.dataset.projectIndex, 10)];
+            openProjectModal(project);
+        });
+    });
+
+    initSectionAnimations();
+}
+
+function openProjectModal(project) {
+    const modal = document.getElementById('projectModal');
+    if (!modal) return;
+
+    document.getElementById('modalImage').src = project.image;
+    document.getElementById('modalImage').alt = project.title;
+    document.getElementById('modalTitle').textContent = project.title;
+    document.getElementById('modalSubtitle').textContent = project.subtitle;
+    document.getElementById('modalDescription').textContent = project.fullDescription;
+    document.getElementById('modalFeatures').innerHTML = project.features.map(feature => `<li>${feature}</li>`).join('');
+    document.getElementById('modalTechnologies').innerHTML = project.technologies.map(tech => `<span>${tech}</span>`).join('');
+    document.getElementById('modalSkills').innerHTML = project.skills.map(skill => `<span>${skill}</span>`).join('');
+
+    const linkButton = document.getElementById('modalLink');
+    if (project.link) {
+        linkButton.href = project.link;
+        linkButton.style.display = 'inline-flex';
+    } else {
+        linkButton.style.display = 'none';
+    }
+
+    modal.classList.add('active');
+    modal.setAttribute('aria-hidden', 'false');
+}
+
+function closeProjectModal() {
+    const modal = document.getElementById('projectModal');
+    if (!modal) return;
+
+    modal.classList.remove('active');
+    modal.setAttribute('aria-hidden', 'true');
+}
+
+function initProjectModal() {
+    const modal = document.getElementById('projectModal');
+    const closeButton = document.getElementById('projectModalClose');
+
+    if (!modal || !closeButton) return;
+
+    closeButton.addEventListener('click', closeProjectModal);
+    modal.addEventListener('click', function(event) {
+        if (event.target === modal) {
+            closeProjectModal();
+        }
+    });
+
+    document.addEventListener('keydown', function(event) {
+        if (event.key === 'Escape') {
+            closeProjectModal();
+        }
+    });
+}
+
 // ==================== PARALLAX EFFECT ==================== 
 
 window.addEventListener('scroll', function() {
@@ -300,6 +462,8 @@ document.addEventListener('DOMContentLoaded', function() {
     initDarkMode();
     initScrollToTop();
     initContactForm();
+    renderProjects();
+    initProjectModal();
     updateOngoingExperiences();
     setInterval(updateOngoingExperiences, 3600000);
 });
