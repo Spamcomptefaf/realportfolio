@@ -1029,12 +1029,6 @@ a:hover {
     animation: fadeInUp 0.5s ease;
     position: relative;
 }
-    font-size: 1.1rem;
-    display: flex;
-    align-items: center;
-    gap: var(--spacing-sm);
-    text-decoration: none;
-}
 
 .project-content {
     padding: var(--spacing-lg);

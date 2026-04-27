@@ -191,7 +191,7 @@ const observer = new IntersectionObserver(function(entries) {
 }, observerOptions);
 
 function initSectionAnimations() {
-    document.querySelectorAll('.project-card, .experience-card, .skill-group, .stat-card, .skills-category').forEach(element => {
+    document.querySelectorAll('.experience-card, .skill-group, .stat-card, .skills-category').forEach(element => {
         element.style.opacity = '0';
         observer.observe(element);
     });
