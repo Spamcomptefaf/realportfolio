@@ -891,6 +891,7 @@ a:hover {
     display: flex;
     flex-direction: column;
     cursor: pointer;
+    opacity: 1;
 }
 
 .project-card:hover {
