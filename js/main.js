@@ -279,7 +279,7 @@ const projectsData = [
         ],
         technologies: ['Laravel', 'PHP', 'SQLite', 'Blade', 'Bootstrap'],
         skills: ['MVC', 'base de données', 'backend', 'sécurité'],
-        image: 'https://via.placeholder.com/900x600.png?text=BiblioTech',
+        image: 'img/laravel.png',
         link: ''
     },
     {
@@ -296,7 +296,7 @@ const projectsData = [
         ],
         technologies: ['HTML5', 'CSS3', 'JavaScript ES6+', 'Supabase', 'API REST', 'GitHub', 'Netlify/Vercel'],
         skills: ['Frontend', 'API', 'base de données', 'déploiement', 'projet full-stack'],
-        image: 'https://via.placeholder.com/900x600.png?text=AI+Mood+Tracker',
+        image: 'img/ai-mood-tracker.png',
         link: 'https://emoji-ai-mood.lovable.app'
     },
     {
@@ -313,7 +313,7 @@ const projectsData = [
         ],
         technologies: ['HTML5', 'CSS3', 'JavaScript', 'PHP'],
         skills: ['Création de site e-commerce', 'gestion de produits', 'logique backend', 'interface utilisateur'],
-        image: 'https://via.placeholder.com/900x600.png?text=Boussou+Fragrances',
+        image: 'img/boussou-fragrances.png',
         link: ''
     },
     {
@@ -329,7 +329,7 @@ const projectsData = [
         ],
         technologies: ['Python', 'API Mistral AI', 'OpenWeatherMap', 'variables d’environnement (.env)', 'API REST'],
         skills: ['Intégration d’API', 'intelligence artificielle', 'gestion de données en temps réel', 'sécurité des clés API', 'bonnes pratiques RGPD'],
-        image: 'https://via.placeholder.com/900x600.png?text=Assistant+M%C3%A9t%C3%A9o+Intelligent',
+        image: 'img/assistant-meteo.png',
         link: ''
     }
 ];
