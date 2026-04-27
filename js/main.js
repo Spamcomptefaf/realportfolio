@@ -255,8 +255,8 @@ function initContactForm() {
             return;
         }
 
-        // Le formulaire sera soumis normalement à FormSubmit
         showToast('Envoi en cours...', 'info');
+        // Le formulaire sera soumis normalement à Web3Forms
     });
 }
 
